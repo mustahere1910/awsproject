@@ -1,0 +1,9 @@
+{
+	"name": "aw-project-df",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0ad79964-7cf3-4e8f-b9c6-ee036c2e25d7",
+		"tenantId": "7540734b-e567-46c3-9ad3-ec9fb9e50140"
+	}
+}
