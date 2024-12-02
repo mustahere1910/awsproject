@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "aw-project-df"
+		},
+		"AzureDataLakeStorage1_0_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1_0'"
+		},
+		"httplinkdsrvs_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'httplinkdsrvs'"
+		},
+		"AzureDataLakeStorage1_0_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://awprojectdl.dfs.core.windows.net/"
+		},
+		"httplinkdsrvs_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://raw.githubusercontent.com/"
+		},
+		"httplinkdsrvs_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "azuser2392"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "aw-project-df_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureDataLakeStorage1_0_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage1_0_accountKey')]"
+					},
+					"httplinkdsrvs_password": {
+						"value": "[parameters('httplinkdsrvs_password')]"
+					},
+					"AzureDataLakeStorage1_0_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage1_0_properties_typeProperties_url')]"
+					},
+					"httplinkdsrvs_properties_typeProperties_url": {
+						"value": "[parameters('httplinkdsrvs_properties_typeProperties_url')]"
+					},
+					"httplinkdsrvs_properties_typeProperties_userName": {
+						"value": "[parameters('httplinkdsrvs_properties_typeProperties_userName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
