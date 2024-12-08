@@ -1,0 +1,28 @@
+{
+	"name": "aws_project",
+	"properties": {
+		"activities": [
+			{
+				"name": "invtry_mgmt",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/azuser2393_mml.local@techademy.com/Aws_project/invntry_mgmt_2.0"
+				},
+				"linkedServiceName": {
+					"referenceName": "AzureDatabricks1",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

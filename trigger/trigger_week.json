@@ -1,0 +1,24 @@
+{
+	"name": "trigger_week",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "aws_project",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 7,
+				"startTime": "2024-12-08T14:45:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
