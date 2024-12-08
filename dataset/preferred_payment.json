@@ -1,0 +1,35 @@
+{
+	"name": "preferred_payment",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage3_0",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Reports"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "preferred_payment.csv",
+				"fileSystem": "reports"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "transaction_type",
+				"type": "String"
+			},
+			{
+				"name": "order_count",
+				"type": "String"
+			}
+		]
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"name": "Top_customers",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage3_0",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Reports"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "Top_customers.csv",
+				"fileSystem": "reports"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "customer_name",
+				"type": "String"
+			},
+			{
+				"name": "Transaction_amount",
+				"type": "String"
+			}
+		]
+	}
+}

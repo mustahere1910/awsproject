@@ -1,0 +1,155 @@
+{
+	"name": "Rawfile_invntry_mgmt",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage2_0",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Raw_files"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Inventory_Management_Src1.csv",
+				"fileSystem": "inventry-inp"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date",
+				"type": "String"
+			},
+			{
+				"name": "TRANSACTION_ID",
+				"type": "String"
+			},
+			{
+				"name": "TRANSACTION_DATE",
+				"type": "String"
+			},
+			{
+				"name": "TRANSACTION_AMOUNT",
+				"type": "String"
+			},
+			{
+				"name": "TRANSACTION_TYPE",
+				"type": "String"
+			},
+			{
+				"name": "DISPATCH_DATE",
+				"type": "String"
+			},
+			{
+				"name": "EXPECTED_DATE",
+				"type": "String"
+			},
+			{
+				"name": "DELIVERY_DATE",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT_ID",
+				"type": "String"
+			},
+			{
+				"name": "CATEGORY_ID",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT Name",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT Brand",
+				"type": "String"
+			},
+			{
+				"name": "Product Model No. ",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT_STOCK",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_ID",
+				"type": "String"
+			},
+			{
+				"name": "Customer Name",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_LOGIN_ID",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_STREET_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_CITY",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_STATE",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_ZIP",
+				"type": "String"
+			},
+			{
+				"name": "CUSTOMER_PHONE_NO",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_ID",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_NAME",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_RATING",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_STREET_ADDRESS",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_CITY",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_STATE",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_ZIP",
+				"type": "String"
+			},
+			{
+				"name": "SELLER_PHONE_NO",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT_COST_PRICE",
+				"type": "String"
+			},
+			{
+				"name": "PRODUCT_SELLING_PRICE",
+				"type": "String"
+			}
+		]
+	}
+}
