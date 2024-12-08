@@ -8,10 +8,10 @@
 			"server": "aws-project-01.database.windows.net",
 			"database": "aws-project-op",
 			"encrypt": "mandatory",
-			"trustServerCertificate": false,
+			"trustServerCertificate": true,
 			"authenticationType": "SQL",
-			"userName": "azuer2392",
-			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUzNzE0NDBCLTBDQTItNDNERC04OUI2LUU1OEM4Mjk2RjEwM19lY2IzMTZiOS00ZTFiLTRmOTktYTI2My02MzNmOWJiOGQyYzkiDQp9"
+			"userName": "azuser2393",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEUzNzE0NDBCLTBDQTItNDNERC04OUI2LUU1OEM4Mjk2RjEwM183NjI5MWFhMS0zZTI3LTRjNzYtYWU1MC1lZjlkZDc1NTg0MjAiDQp9"
 		}
 	}
 }
